@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zhao Yuxi · Portfolio</title>
+<meta name="description" content="Zhao Yuxi: Electronics, Control &amp; Materials engineer. System identification, reinforcement learning, force-feedback control and physics-informed modeling.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400;1,8..60,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="sheet-frame" aria-hidden="true"></div>
+
+<header class="site-head">
+  <div class="head-inner">
+    <span class="run-id">ZHAO, Y. &middot; PORTFOLIO PREPRINT</span>
+    <nav class="ruler-nav" aria-label="Section navigation">
+      <a href="#abstract">Abstract</a>
+      <a href="#education">&sect;I Education</a>
+      <a href="#projects">&sect;II Projects</a>
+      <a href="#skills">&sect;III Skills</a>
+      <a href="#contact">&sect;IV Contact</a>
+    </nav>
+    <a class="cv-btn" href="assets/CV_Yuxi.pdf" target="_blank" rel="noopener">PDF <span aria-hidden="true">↗</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="titlepage" id="top">
+    <p class="manuscript-tag">Portfolio &middot; Rev&nbsp;A &middot; 2026 &middot; compiled from CV &amp; project archive</p>
+    <h1 class="paper-title">Zhao Yuxi</h1>
+    <p class="paper-byline">Electronics, Control &amp; Materials Engineering</p>
+    <p class="paper-affil">
+      Universit&eacute; Paris-Saclay &middot; Paris, France
+      &nbsp;&nbsp;<span class="corr-mark" aria-hidden="true">&dagger;</span>
+      <a href="mailto:zhyxDoolen@outlook.com">zhyxDoolen@outlook.com</a>
+    </p>
+  </section>
+
+  <section class="abstract-block" id="abstract">
+    <h2 class="abstract-label">Abstract</h2>
+    <p class="abstract-text">
+      I hold a dual degree in Electronics &amp; Automation and Materials Science through a Chinese&ndash;French
+      cooperative program: a bachelor's at Universit&eacute; Toulouse&nbsp;III and Northeastern University,
+      now continuing into a master's in Automatic Control, Signal &amp; Image Processing at Universit&eacute;
+      Paris-Saclay. That split background is the thread through the work below: I am equally comfortable
+      deriving a system's dynamics on paper, instrumenting the hardware that measures it, and training the
+      model or controller that acts on it. Recent work centers on actuator and process identification,
+      most recently fitting the actuator dynamics of a 30-DoF humanoid robot and training the
+      standing-balance policy built on top of that identified model.
+    </p>
+    <p class="index-terms"><strong>Index Terms:</strong> system identification, reinforcement learning,
+      nonlinear control, physics-informed modeling, force feedback, embedded control.</p>
+  </section>
+
+  <div class="paper-body">
+
+    <section id="education" class="sec">
+      <h2>I.&nbsp; Education &amp; Experience</h2>
+      <p class="sec-note">Most recent first.</p>
+      <ol class="cv-list">
+        <li>
+          <span class="cv-years">2026</span>
+          <strong>Research Intern, MOGA Humanoid Robotics.</strong>
+          Anhui Mojia Zhichuang Robot Technology Co., Wuhu, China (Apr&ndash;Aug). Actuator system
+          identification and reinforcement-learning control for a 30-DoF humanoid (see
+          <a href="#prj-01">Project&nbsp;1</a>).
+        </li>
+        <li>
+          <span class="cv-years">2024&ndash;2026</span>
+          <strong>M.Sc., Automatic, Signal &amp; Image Processing (ATSI).</strong>
+          Universit&eacute; Paris-Saclay, M1 EEEA 14.6/20 (top&nbsp;1%), M2 in progress. Statistical
+          machine learning &amp; reinforcement learning, nonlinear system control, MIMO, convex
+          optimization, multi-agent systems.
+        </li>
+        <li>
+          <span class="cv-years">2020&ndash;2024</span>
+          <strong>B.Sc., Electronics, Electrical Energy &amp; Automation.</strong>
+          Universit&eacute; Toulouse&nbsp;III - Paul Sabatier, 14.36/20 (top&nbsp;10%). Industrial
+          information, digital &amp; analog electronics, electric machines, communication principles,
+          linear automation systems, signal processing.
+        </li>
+        <li>
+          <span class="cv-years">2020&ndash;2024</span>
+          <strong>B.Eng., Materials Science &amp; Engineering</strong> <em>(dual degree)</em>.
+          Northeastern University (211&nbsp;&amp;&nbsp;985), Liaoning, China (top&nbsp;15%). Physical
+          chemistry, mechanical properties of materials, fluid mechanics, linear algebra, dynamics,
+          mechanical design.
+        </li>
+      </ol>
+    </section>
+
+    <section id="projects" class="sec">
+      <h2>II.&nbsp; Selected Projects</h2>
+      <p class="sec-note">Eight system-identification, control and modeling projects, 2023&ndash;2026.</p>
+
+      <article class="prj featured" id="prj-01">
+        <header class="prj-head">
+          <div class="prj-id">[1]</div>
+          <div class="prj-title">
+            <h3>Actuator System Identification &amp; Standing-Balance RL for a 30-DoF Humanoid</h3>
+            <p class="prj-meta"><span class="status">Completed</span>Research internship &middot; Apr&ndash;Aug 2026 &middot; MOGA Humanoid Robotics, Wuhu</p>
+          </div>
+        </header>
+        <ul class="prj-points">
+          <li>Identified actuator dynamics (armature, direction/velocity-dependent friction &amp; damping, communication delay) for 7 custom motor types on a 30-DoF humanoid, using the PACE framework with a CMA-ES optimization loop in Isaac Lab against chirp-sweep excitation data.</li>
+          <li>Built a multi-joint chirp-sweep excitation pipeline in ROS&nbsp;2 Control, driving independent frequency, amplitude and PD gains per joint set while locking non-excited joints at stand pose with high-stiffness PD control.</li>
+          <li>Showed that combined multi-joint identification outperforms isolated single-joint identification on load-bearing joints, reducing average on-robot tracking RMSE relative to non-identified defaults.</li>
+          <li>Trained a PPO standing-balance policy (Isaac Lab, 4096 parallel environments) that rejects upper-body disturbances, with domain-randomization ranges centered on the identified actuator parameters, narrowing the sim-to-real gap for deployment.</li>
+        </ul>
+        <ul class="prj-tools">
+          <li>ROS&nbsp;2</li><li>Isaac Lab</li><li>MuJoCo</li><li>PyTorch</li><li>CMA-ES</li><li>PPO</li>
+        </ul>
+      </article>
+
+      <ol class="ref-list" start="2">
+        <li class="ref-item" id="prj-02">
+          <strong>Physics-Informed Identification of Nonlinear Dynamic Systems.</strong>
+          Research project, Paris-Saclay, Dec&nbsp;2025&ndash;Mar&nbsp;2026. Modeled bioprocess dynamics as
+          black-box and gray-box systems, comparing a pure-ODE baseline against Physics-Informed Neural
+          Network formulations; iterated the PINN loss and architecture across several versions, adding a
+          weighted mean-square-error loss and a Bayesian search over the physics-loss weight &lambda;.
+          <span class="ref-kw">Keywords: MATLAB, PINN, Bayesian optimization.</span>
+        </li>
+        <li class="ref-item" id="prj-03">
+          <strong>Force-Feedback Steering Wheel: Dynamics Modeling &amp; Embedded Control.</strong>
+          Academic project, LISV, Paris-Saclay, Apr&ndash;Jun&nbsp;2025. Derived the handle's rotational
+          dynamics and built the Simulink model linking commanded torque to angular response; designed a
+          transparent-mode force-feedback loop and an active force-tracking mode; instrumented the handle
+          with bonded strain gauges and an HX711 load-cell front end read from STM32F10x firmware.
+          <span class="ref-kw">Keywords: Simulink, STM32/C, HX711 load cell, strain gauges.</span>
+        </li>
+        <li class="ref-item" id="prj-04">
+          <strong>Mobile Robot Control via Discrete-Event &amp; Linear Systems.</strong>
+          Academic project, Toulouse&nbsp;III, Feb&ndash;Jun&nbsp;2024. Combined a discrete-event state
+          machine (AED) for mode and sequencing logic with PID controllers (ASL) tuned from the identified
+          system dynamics; modeled and validated the combined architecture in Simulink.
+          <span class="ref-kw">Keywords: Simulink, MATLAB, state machines, PID.</span>
+        </li>
+        <li class="ref-item" id="prj-05">
+          <strong>Underwater Image Semantic Segmentation (SUIM).</strong>
+          Coursework, machine learning. Benchmarked DeepLab&nbsp;v3 and U-Net on the SUIM dataset
+          (1,525 train/validation and 110 held-out test images across 8 classes spanning divers, reefs,
+          robots, wrecks and sea-floor), training and evaluating both models in PyTorch.
+          <span class="ref-kw">Keywords: Python, PyTorch, DeepLab v3, U-Net.</span>
+        </li>
+        <li class="ref-item" id="prj-06">
+          <strong>Statistical Analysis of Meteorological Time Series.</strong>
+          Coursework, applied statistics. Ran a preliminary exploratory study of a weather time-series
+          dataset, applied Principal Component Analysis (ACP) to reduce and interpret the variable space,
+          and compared hierarchical clustering (CAH) and k-means to segment the series into regimes.
+          <span class="ref-kw">Keywords: Python, scikit-learn, Jupyter.</span>
+        </li>
+        <li class="ref-item" id="prj-07">
+          <strong>Trapped Electric Charges in PEN Polymer Films.</strong>
+          Experimental study, Toulouse&nbsp;III, Oct&ndash;Dec&nbsp;2023. Studied the energetic distribution
+          of trapped electrical charges in PEN thin-film polymers using the Laser-Induced Modulation Method
+          (LIMM) and Pressure/Surface-potential Decay (PSD) techniques.
+          <span class="ref-kw">Keywords: LIMM, PSD, experimental electrostatics.</span>
+        </li>
+        <li class="ref-item" id="prj-08">
+          <strong>Point-Discharge Effect: Electric Field Study.</strong>
+          Coursework, Toulouse&nbsp;III. Measured and compared point-to-plane versus plane-to-plane
+          electrode configurations for corona (point-discharge) effects, processing the acquired field data
+          with custom C programs.
+          <span class="ref-kw">Keywords: C, experimental electrostatics.</span>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills" class="sec">
+      <h2>III.&nbsp; Instrument Panel</h2>
+      <p class="sec-note">Grouped by where they're used, not ranked; see Section&nbsp;II for context.</p>
+      <div class="skill-cat">
+        <h3>Control &amp; Robotics</h3>
+        <p>ROS&nbsp;2 / ROS&nbsp;2 Control, Isaac Lab, MuJoCo, PID control, discrete-event state machines, CMA-ES.</p>
+      </div>
+      <div class="skill-cat">
+        <h3>Machine Learning</h3>
+        <p>PyTorch, TensorFlow, reinforcement learning (PPO), physics-informed neural networks, DeepLab&nbsp;v3 / U-Net.</p>
+      </div>
+      <div class="skill-cat">
+        <h3>Modeling &amp; Signal</h3>
+        <p>MATLAB / Simulink, system identification, nonlinear dynamics, PCA &amp; clustering.</p>
+      </div>
+      <div class="skill-cat">
+        <h3>Hardware &amp; Embedded</h3>
+        <p>STM32 (C), VHDL, Catia, load cells &amp; strain gauges.</p>
+      </div>
+      <div class="skill-cat">
+        <h3>Languages</h3>
+        <p>Chinese <em>native</em>, English <em>B2</em>, French <em>B1</em>.</p>
+      </div>
+      <div class="skill-cat">
+        <h3>Programming</h3>
+        <p>Python, C, MATLAB, VHDL.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="sec sec-full">
+      <h2>IV.&nbsp; Correspondence</h2>
+      <p class="contact-note">Open to PhD positions and research-engineer roles in control, robotics and
+        learning for physical systems. <span class="corr-mark" aria-hidden="true">&dagger;</span>
+        Corresponding author: reach out by email.</p>
+      <dl class="contact-facts">
+        <div><dt>Email</dt><dd><a href="mailto:zhyxDoolen@outlook.com">zhyxDoolen@outlook.com</a></dd></div>
+        <div><dt>Location</dt><dd>Shanxi, China</dd></div>
+        <div><dt>GitHub</dt><dd><a href="https://github.com/YUXI-NUM" target="_blank" rel="noopener">github.com/YUXI-NUM</a></dd></div>
+        <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/yuxi-zhao-394a24330" target="_blank" rel="noopener">linkedin.com/in/yuxi-zhao-394a24330</a></dd></div>
+      </dl>
+    </section>
+
+  </div>
+
+</main>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <p><span class="corr-mark" aria-hidden="true">&dagger;</span> Corresponding author. Manuscript compiled 2026.</p>
+    <p>&copy; 2026 Zhao Yuxi. Built as a static page: no tracking, no frameworks.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
